@@ -1,7 +1,6 @@
+import { createInterface } from 'readline';
 
-const rl = require('readline')
-
-const prompt = rl.createInterface({
+const prompt = createInterface({
     input:process.stdin,
     output: process.stdout
 })
@@ -9,7 +8,7 @@ const prompt = rl.createInterface({
 const promptPromise = {
     question: (pergunta) => new Promise((resolve, reject) => {
         try{
-            prompt.question((pergunta), (resposta) => resolve(resposta));
+            prompt.question(pergunta, (resposta) => resolve(resposta));
         } catch (error) {
             reject(error)
         }
