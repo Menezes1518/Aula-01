@@ -11,4 +11,9 @@ export default [
   ...tseslint.configs.recommended,
 ];
 
+module.exports = {
+  rules: {
+    '@typescript-eslint/no-require-imports': 'off',
+  },
+};
 
